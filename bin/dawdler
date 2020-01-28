@@ -1,0 +1,62 @@
+#!/usr/bin/env node 
+'use strict'
+
+const path = require('path')
+const program = require('commander')
+const chalk = require('chalk')
+
+process.env.NODE_PATH = path.resolve(__dirname,'/../node_modules/')
+
+ // 定义当前版本
+program.version(require('../package').version )
+
+// 定义使用方法
+program.usage('<command>')
+
+//init
+program
+    .command('init')
+    .description('Select and create project template')
+    .alias('i')
+    .action(() => {
+        console.log(chalk.cyan('Thanks for using Dawdler , good luck.'))
+        require('../lib/init')
+    })
+
+// //react 
+// program
+//     .command('react')
+//     .description('Create react project template')
+//     .alias('r')
+//     .action(() => {
+//         console.log(chalk.cyan('Only react and redux are currently supported project.'))
+//         require('../lib/react')
+//     })
+
+// // node
+// program
+//     .command('node')
+//     .description('Create node project template')
+//     .alias('n')
+//     .action(() => {
+//         console.log(chalk.cyan('Only express projects are currently supported.'))
+//         console.log(chalk.red('node project template in development'))
+//         require('../lib/node')
+//     })
+
+// // npm plugins
+// program
+//     .command('npm')
+//     .description('Create npm module plugin')
+//     .alias('m')
+//     .action(() => {
+//         console.log(chalk.red('npm project template in development'))
+//         require('../lib/npm')
+//     })
+
+
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
+}
