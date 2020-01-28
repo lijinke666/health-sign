@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+'use strict'
+
+const path = require('path')
+const program = require('commander')
+
+process.env.NODE_PATH = path.resolve(__dirname,'/../node_modules/')
+
+program.version(require('../package').version )
+
+program.usage('<command>')
+
+//init
+program
+    .command('sign')
+    .description('每日健康打卡')
+    .alias('s')
+    .action(() => {
+        require('../lib/index')
+    })
+
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
+}
