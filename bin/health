@@ -10,7 +10,6 @@ program.version(require('../package').version )
 
 program.usage('<command>')
 
-//init
 program
     .command('sign')
     .description('每日健康打卡')
@@ -20,7 +19,3 @@ program
     })
 
 program.parse(process.argv)
-
-if(!program.args.length){
-  program.help()
-}

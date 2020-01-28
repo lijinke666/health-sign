@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "prettier --write \"lib/**/*.js\" && eslint_d --fix src",
-    "prepublishOnly": "yarn run test && yarn run lint"
+    "prepublishOnly": "yarn lint"
   },
   "bin": {
     "hl": "bin/health",
@@ -27,10 +27,10 @@
   },
   "homepage": "https://github.com/lijinke666/health-sign#README.md",
   "dependencies": {
-    "chalk": "^2.3.1",
-    "commander": "^2.14.1",
-    "inquirer": "^5.1.0",
-    "ora": "^4.0.3"
+    "commander": "^4.1.0",
+    "inquirer": "^7.0.4",
+    "ora": "^4.0.3",
+    "signale": "1.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
