@@ -30,6 +30,7 @@
     "commander": "^4.1.0",
     "inquirer": "^7.0.4",
     "ora": "^4.0.3",
+    "puppeteer": "^2.1.0",
     "signale": "1.4.0"
   },
   "devDependencies": {
