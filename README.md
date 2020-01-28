@@ -1,4 +1,4 @@
-# 每日健康打卡
+# 每日健康打卡工具
 
 [![npm](https://img.shields.io/npm/dm/health-sign.svg?style=flat-square)](https://www.npmjs.com/package/health-sign)
 [![npm version](https://img.shields.io/npm/v/health-sign.svg?style=flat-square)](https://badge.fury.io/js/health-sign)
@@ -8,7 +8,20 @@
 
 ![https://cdn.lijinke.cn/2020-01-28%2015.25.26.gif](https://cdn.lijinke.cn/2020-01-28%2015.25.26.gif)
 
-###
+## 安装
+
+```bash
+yarn global add health-sign
+// npm i health-sign -g
+```
+
+## 使用
+
+```bash
+health sign
+// health s
+// hl s
+```
 
 ## License
 
