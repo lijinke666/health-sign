@@ -10,12 +10,14 @@ program.version(require('../package').version )
 
 program.usage('<command>')
 
+program.option('-u, --url <url>', '金数据打卡链接');
+
 program
     .command('sign')
     .description('每日健康打卡')
     .alias('s')
     .action(() => {
-        require('../lib/index')
+        require('../lib/index')(program.url)
     })
 
 program.parse(process.argv)

@@ -23,6 +23,12 @@ health sign
 // hl s
 ```
 
+## 指定链接打卡
+
+```bash
+health sign -u https://xx
+```
+
 ## License
 
 [MIT](https://github.com/lijinke666/dawdler/blob/master/LICENCE)
